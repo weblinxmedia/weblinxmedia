@@ -5,7 +5,9 @@ export const siteConfig = {
   navLinks: [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services", hasDropdown: true },
-    { name: "Portfolio", href: "/portfolio" },
+    { name: "Work", href: "/work" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ],
   services: [
     { name: "Website Development", href: "/services/web-development" },
