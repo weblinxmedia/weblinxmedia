@@ -32,6 +32,12 @@ export const metadata: Metadata = {
     description: "We are a results-driven web development & digital marketing agency committed to helping brands grow through SEO, Social Media, and Web Design.",
     url: "https://www.weblinxmedia.com",
     type: "website",
+    
+  },
+    icons: {
+    icon: '/images/logo.webp', // Points to /public/custom-icon.png
+    shortcut: '/images/logo.webp',
+    apple: '/images/logo.webp',
   },
   verification: {
     google: "2TonKZSec1uToGHRforVHsvwbKdFVlivM4J8OD0lc9g", // paste your code here
