@@ -4,7 +4,7 @@ import { Parkinsans, Sora } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import SmoothScroll from "@/components/SmoothScroll"; // <-- Import the new component
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 const parkinsans = Parkinsans({
   subsets: ["latin"],
   variable: "--font-parkinsans",
@@ -18,11 +18,6 @@ const outfit = Sora({
 });
 // app/layout.tsx
 // app/layout.tsx
-export const metadata = {
-  verification: {
-    google: "google-site-verification=2TonKZSec1uToGHRforVHsvwbKdFVlivM4J8OD0lc9g",
-  },
-};
 
 export default function RootLayout({
   children,
@@ -31,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        
+      </head>
       {/* Added overflow-x-hidden to body to permanently prevent horizontal scrollbars globally */}
       <body className={`${parkinsans.variable} ${outfit.variable} bg-white text-black transition-colors duration-300 overflow-x-hidden`}>
         <ThemeProvider>
@@ -39,6 +37,7 @@ export default function RootLayout({
             {children}
           </SmoothScroll>
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-8FKF0T0QMM"/>
       </body>
     </html>
   );
