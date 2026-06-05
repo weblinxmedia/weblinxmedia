@@ -16,10 +16,12 @@ const outfit = Sora({
   variable: "--font-outfit",
   weight: ["300", "400", "500", "600", "700"],
 });
-
-export const metadata: Metadata = {
-  title: "Weblinx Media | Premium Web Design & Development",
-  description: "Premium website design, development, and social media marketing agency.",
+// app/layout.tsx
+// app/layout.tsx
+export const metadata = {
+  verification: {
+    google: "google-site-verification=2TonKZSec1uToGHRforVHsvwbKdFVlivM4J8OD0lc9g",
+  },
 };
 
 export default function RootLayout({
