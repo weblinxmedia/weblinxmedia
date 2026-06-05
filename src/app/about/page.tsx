@@ -1,7 +1,4 @@
-// src/app/page.tsx
-
-"use client";
-
+// src/app/page.ts
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us | Weblinx Media",
