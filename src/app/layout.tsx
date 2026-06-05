@@ -18,7 +18,25 @@ const outfit = Sora({
 });
 // app/layout.tsx
 // app/layout.tsx
+// app/layout.tsx
+// import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.weblinxmedia.com"),
+  title: "Weblinx Media | Best Full Stack Web Development Agency",
+  description: "We are a results-driven web development & digital marketing agency committed to helping brands grow through SEO, Social Media, and Web Design.",
+  keywords: ["Weblinx Media", "Weblinx", "Marketing Agencies near me", "Website development", "Website Design", "Marketing agencies in Lahore"],
+  authors: [{ name: "Ali Imran" }],
+  openGraph: {
+    title: "Weblinx Media | Best Full Stack Web Development Agency",
+    description: "We are a results-driven web development & digital marketing agency committed to helping brands grow through SEO, Social Media, and Web Design.",
+    url: "https://www.weblinxmedia.com",
+    type: "website",
+  },
+  verification: {
+    google: "google-site-verification=2TonKZSec1uToGHRforVHsvwbKdFVlivM4J8OD0lc9g", // paste your code here
+  },
+};
 export default function RootLayout({
   children,
 }: Readonly<{
