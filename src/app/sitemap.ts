@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://www.weblinxmedia.com",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 1.0,
     },
     {
@@ -18,19 +18,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://www.weblinxmedia.com/services",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 0.9,
     },
      {
       url: "https://www.weblinxmedia.com/work",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 0.9,
     },
         {
       url: "https://www.weblinxmedia.com/contact",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 0.9,
     },
   ];
