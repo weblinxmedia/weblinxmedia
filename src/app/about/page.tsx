@@ -1,5 +1,12 @@
 // src/app/page.tsx
+
 "use client";
+
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "About Us | Weblinx Media",
+  description: "Learn about the team behind Weblinx Media...",
+};
 export default function About() {
 //   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 

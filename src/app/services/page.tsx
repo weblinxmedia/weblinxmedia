@@ -1,7 +1,11 @@
 'use client'
 import Header from "@/components/Header/Header"
 import React from "react"
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Our Services | Weblinx Media",
+  description: "Web development, SEO, Social Media Marketing and more...",
+};
 export default function Services(){
       return (
     <>

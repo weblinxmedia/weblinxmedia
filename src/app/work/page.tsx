@@ -1,6 +1,10 @@
 'use client'
 import React from "react"
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Our Work | Weblinx Media",
+  description: "Web development, SEO, Social Media Marketing and more...",
+};
 export default function Work(){
       return (
   <main className="min-h-screen flex justify-center items-center w-full bg-white text-black overflow-x-hidden relative">
