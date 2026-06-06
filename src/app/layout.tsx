@@ -23,7 +23,11 @@ const outfit = Sora({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.weblinxmedia.com"),
-  title: "Weblinx Media | Best Full Stack Web Development Agency",
+  applicationName: 'Weblinx Media',
+  title: {
+    default: "Weblinx Media | Best Full Stack Web Development Agency",
+    template: "%s | Weblinx Media",
+  },
   description: "We are a results-driven web development & digital marketing agency committed to helping brands grow through SEO, Social Media, and Web Design.",
   keywords: ["Weblinx Media", "Weblinx", "Marketing Agencies near me", "Website development", "Website Design", "Marketing agencies in Lahore"],
   authors: [{ name: "Ali Imran" }],
@@ -34,11 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     
   },
-    icons: {
-    icon: '/images/logo.webp', // Points to /public/custom-icon.png
-    shortcut: '/images/logo.webp',
-    apple: '/images/logo.webp',
-  },
+
   verification: {
     google: "2TonKZSec1uToGHRforVHsvwbKdFVlivM4J8OD0lc9g", // paste your code here
   },
