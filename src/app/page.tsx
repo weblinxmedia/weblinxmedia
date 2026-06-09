@@ -6,6 +6,11 @@ import Header from "@/components/Header/Header";
 import Preloader from "@/components/Preloader";
 import Hero from "@/components/sections/Hero/Hero";
 import ShowcaseSection from "@/components/sections/Showcase/ShowcaseSection";
+import Clients from "@/components/sections/Clients/Clients";
+import WhoAreWe from "@/components/sections/WhoAreWe/WhoAreWe";
+import Brands from "@/components/sections/Brands/Brands";
+import WhyChooseUs from "@/components/sections/WhyChooseUs/WhyChooseUs";
+import OurProcess from "@/components/sections/Process/OurProcess";
 
 export default function Home() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
@@ -27,6 +32,11 @@ export default function Home() {
       
       <Hero canAnimate={isHeaderVisible} />
        <ShowcaseSection />
+       {/* <Clients /> */}
+       <WhoAreWe/>
+       <Brands />
+       <WhyChooseUs />
+       <OurProcess/>
       {/* The 3D Scroll Triggered Section */}
     <div className="w-full h-70 ">
       <h1>new section</h1>

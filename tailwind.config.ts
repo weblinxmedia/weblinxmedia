@@ -12,6 +12,11 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#FFAD14",
+        "warm-white": "#F5F5F0",
+        "acid-lime": "#C8F135",
+        "acid-lime-hover": "#b8e020",
+        "text-muted": "#888888",
+        "text-dark": "#040404",
       },
       fontFamily: {
         // Now you can use className="font-parkinsans" and className="font-outfit"

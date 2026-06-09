@@ -1,4 +1,4 @@
-// src/components/ThemeProvider.tsx
+// src/components/sections/ThemeProvider.tsx
 "use client";
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
@@ -6,7 +6,13 @@ import { ReactNode } from "react";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   return (
-    <NextThemesProvider attribute="class" defaultTheme="light" enableSystem={false}>
+    // Force defaultTheme to dark and disable switching
+    <NextThemesProvider 
+      attribute="class" 
+      defaultTheme="dark" 
+      forcedTheme="dark" // This locks it
+      enableSystem={false}
+    >
       {children}
     </NextThemesProvider>
   );

@@ -8,9 +8,9 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, links }: ServiceCardProps) {
   return (
-    <div className="min-w-[85vw] md:min-w-[25vw] border-1 border-white py-7 rounded-4xl px-9 flex flex-col gap-4 md:gap-4 h-full">
+    <div className="min-w-[85vw] md:min-w-[25vw] border-1 border-[#040404] py-7 rounded-4xl px-9 flex flex-col gap-4 md:gap-4 h-full">
       <div className="overflow-hidden py-1">
-        <h3 className="reveal-item font-parkinsans text-3xl md:text-3xl font-regular">
+        <h3 className="reveal-item font-parkinsans text-[#040404] text-3xl md:text-3xl font-regular">
           {title}
         </h3>
       </div>

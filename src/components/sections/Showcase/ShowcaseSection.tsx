@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { showcaseData } from "@/config/siteConfig";
 import ServiceCard from "./ServiceCard";
-
+import InteractiveDotGrid from "../Hero/InteractiveDotGrid";
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -28,27 +28,27 @@ export default function Showcase() {
       }, (context) => {
         const { isDesktop } = context.conditions as { isDesktop: boolean };
 
-        // 1. INITIAL 3D STATE (Top-Left Back, Bottom-Right Forward)
         gsap.set(cardRef.current, {
           width: isDesktop ? "65vw" : "80vw",
           height: isDesktop ? "75vh" : "40vh",
-          x: isDesktop ? "5vw" : "-5vw",
-          y: "-15vh",
+          x: 0,
+          y: 0,
           rotationX: 25,
           rotationY: -25,
           rotationZ: 5,
           transformPerspective: 1500,
-          borderRadius: "40px",
+          borderRadius: "4rem",
         });
 
+        // 👇 Hide service cards initially, reveal only after expansion
+        gsap.set(".service-card", { opacity: 0 });
         gsap.set(".reveal-item", { yPercent: 110 });
 
-        // 2. MAIN TIMELINE (Expansion + Pin)
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top top",
-            end: isDesktop ? "+=500%" : "+=300%", // Longer on desktop for horizontal
+            start: "center center",
+            end: isDesktop ? "+=500%" : "+=300%",
             scrub: 1,
             pin: true,
             pinSpacing: true,
@@ -69,7 +69,13 @@ export default function Showcase() {
           ease: "power2.inOut",
         });
 
-        // Step B: Reveal Items
+        // Step B: Show service cards AFTER card is fullscreen
+        tl.to(".service-card", {
+          opacity: 1,
+          duration: 0.1,
+        });
+
+        // Step C: Reveal text items
         tl.to(".reveal-item", {
           yPercent: 0,
           stagger: 0.05,
@@ -77,8 +83,10 @@ export default function Showcase() {
           ease: "power3.out",
         }, "-=0.5");
 
-        // Step C: Horizontal Movement (Only if items exceed viewport)
-        const scrollWidth = horizontalRef.current ? horizontalRef.current.offsetWidth - window.innerWidth : 0;
+        // Step D: Horizontal scroll
+        const scrollWidth = horizontalRef.current
+          ? horizontalRef.current.offsetWidth - window.innerWidth
+          : 0;
         if (scrollWidth > 0) {
           tl.to(horizontalRef.current, {
             x: -scrollWidth,
@@ -93,49 +101,65 @@ export default function Showcase() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full z-20 bg-transparent -mt-[15vh]">
-      <div className="h-screen w-full flex items-center justify-center overflow-hidden">
-     
+    <section ref={containerRef} className="relative w-full mx-auto  z-20 bg-[#040404]">
+        
+      <div className="h-screen w-full flex items-center justify-center  overflow-hidden">
+
         {/* Animated 3D Card */}
         <div
           ref={cardRef}
-          className="bg-[#050505] text-white flex flex-col items-start justify-end pb-4 overflow-hidden will-change-transform shadow-2xl"
+          className=" text-white flex flex-col bg-[#ffffff] items-start justify-end pb-4 overflow-hidden will-change-transform shadow-2xl"
         >
-                   <div className="w-[400px] absolute bottom-[-20%] left-[-10%] h-[400px] "
+           <InteractiveDotGrid />
+          {/* Glow */}
+          <div
+            className="w-[400px] absolute bottom-[-20%] left-[-10%] h-[400px]"
             style={{
-                    backgroundImage: 'linear-gradient(-90deg, var(--color-background))',
-                    borderRadius: '100%',
-                    opacity:'30%',
-                    filter:'blur(100px)', 
+              backgroundImage: 'linear-gradient(-90deg, var(--color-background))',
+              borderRadius: '100%',
+              opacity: '30%',
+              filter: 'blur(100px)',
             }}
-            ></div>
-            <div ref={horizontalRef}  className="h-37 flex overflow-hidden items-center mx-auto">
-                <h2 className="reveal-item font-parkinsans px-[3rem]  text-background text-3xl md:text-5xl font-regular leading-tight">
-                  {showcaseData.mainHeading}
-                </h2>
-              </div>
+          />
+             <div
+            className="w-[400px] absolute top-[-20%] right-[-20%] h-[400px]"
+            style={{
+              backgroundImage: 'linear-gradient(-90deg, var(--color-background))',
+              borderRadius: '100%',
+              opacity: '30%',
+              filter: 'blur(100px)',
+            }}
+          />
+
+          {/* 👇 h2 sits at TOP of card, outside horizontal scroller */}
+          <div className="w-full px-[3rem] ">
+            <h2 className="reveal-item font-parkinsans text-[#040404] mb-5 text-center text-3xl md:text-5xl font-regular leading-[1.1]">
+              {showcaseData.mainHeading}
+            </h2>
+          </div>
+
           {/* Horizontal Scroller */}
-          <div 
-            ref={horizontalRef} 
-            className="flex items-start gap-[40px] px-[10vw] flex-nowrap h-fit pt-20 md:pt-3 pb-5"
+          <div
+            ref={horizontalRef}
+            className="flex items-start gap-[40px] px-[10vw] flex-nowrap h-fit pb-5"
           >
             {/* Intro Text Block */}
-            <div className="min-w-[85vw] md:min-w-[30vw] flex flex-col items-start justify-end gap-5 h-full md:gap-5">
-              
+            <div className="min-w-[85vw] md:min-w-[30vw] flex flex-col items-start justify-end gap-5 h-full">
               <div className="overflow-hidden">
-                <p className="reveal-item font-outfit text-white font-thin text-lg md:text-xl max-w-sm">
+                <p className="reveal-item font-outfit text-[#040404] font-thin text-lg md:text-xl max-w-sm">
                   {showcaseData.subHeading}
                 </p>
               </div>
             </div>
 
-            {/* Service Cards Mapped from Config */}
+            {/* Service Cards — wrapped with service-card class */}
             {showcaseData.services.map((service, idx) => (
-              <ServiceCard 
-                key={idx} 
-                title={service.title} 
-                links={service.links} 
-              />
+              <div key={idx} className="service-card">
+                <ServiceCard
+                  title={service.title}
+                  links={service.links}
+                />
+              </div>
             ))}
           </div>
         </div>
