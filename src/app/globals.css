@@ -6,7 +6,12 @@
   --font-parkinsans: var(--font-parkinsans);
   --font-outfit: var(--font-outfit);
   --font-montserrat: var(--font-montserrat);
+  --font-mediasans : var(--font-mediasan);
   --color-background : #FFAD14;
+}
+@theme{
+  --font-mediasans : var(--font-mediasans);
+  --font-eula : var(--font-eula);
 }
 /* Premium Bottom-to-Top Hover Fill */
 .link-hover {
@@ -112,4 +117,10 @@
  position: relative;
  
  font-weight: 500;
+}
+label{
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  color: rgb(34, 34, 34);
+  font-size: 15px;
 }

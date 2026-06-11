@@ -62,7 +62,7 @@ export default function TimelineItem({
           </span>
           {/* Tiny divider */}
           <span className="w-4 h-px bg-background/40 flex-shrink-0" />
-          <h3 className="font-parkinsans text-[#ffffff] text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight">
+          <h3 className="font-montserrat text-[#ffffff] text-2xl md:text-3xl lg:text-4xl font-regular leading-tight tracking-tight">
             {title}
           </h3>
         </div>

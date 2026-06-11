@@ -18,13 +18,17 @@ const config: Config = {
         "text-muted": "#888888",
         "text-dark": "#040404",
       },
+      
       fontFamily: {
         // Now you can use className="font-parkinsans" and className="font-outfit"
         parkinsans: ["var(--font-parkinsans)", "sans-serif"],
         outfit: ["var(--font-outfit)", "sans-serif"],
       },
+      
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 };
 export default config;

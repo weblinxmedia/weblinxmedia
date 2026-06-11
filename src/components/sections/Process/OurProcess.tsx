@@ -49,7 +49,7 @@ export default function OurProcess() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-[#040404] py-30 px-6 md:px-20 text-white overflow-hidden"
+      className="relative w-full bg-[#040404] pt-10 pb-40 px-6 rounded-b-[5rem]  md:px-20 text-white overflow-hidden"
     >
       {/* ── Ambient background glow ─────────────────────────────────────── */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -76,7 +76,7 @@ export default function OurProcess() {
             <span className="inline-block w-8 h-px bg-background" />
             How We Work
           </p>
-          <h2 className="font-parkinsans text-[#ffffff] text-4xl md:text-6xl lg:text-7xl font-semibold leading-[0.95] tracking-tight">
+          <h2 className="font-montserrat text-[#ffffff] text-4xl md:text-6xl lg:text-7xl font-semibold leading-[0.95] tracking-tight">
             The{" "}
             <span className="relative inline-block">
               Blueprint
@@ -111,7 +111,7 @@ export default function OurProcess() {
           </div>
 
           {/* Right Column: Image Grid */}
-          <div className="sticky top-24 h-screen hidden md:block">
+          <div className="sticky top-24 h-screen md:block">
             <ImageGrid />
           </div>
         </div>

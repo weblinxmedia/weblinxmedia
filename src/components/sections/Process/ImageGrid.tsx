@@ -44,7 +44,7 @@ export default function ImageGrid() {
           src="/images/process1.jpg"
           alt="Process step"
           fill
-          className="object-contain"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
       </div>

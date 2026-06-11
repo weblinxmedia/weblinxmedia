@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
               initial={{ y: "110%" }}
               animate={isInView ? { y: 0 } : {}}
               transition={{ duration: 1, ease: [0.33, 1, 0.68, 1] }}
-              className="font-montserrat text-background text-4xl md:text-5xl font-medium"
+              className="font-parkinsans text-background text-4xl md:text-5xl tracking-tighter leading-13 font-medium"
             >
               {whyChooseUsData.heading}
             </motion.h2>
