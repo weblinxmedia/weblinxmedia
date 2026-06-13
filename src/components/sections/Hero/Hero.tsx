@@ -7,7 +7,7 @@ import InteractiveDotGrid from "./InteractiveDotGrid";
 
 export default function Hero({ canAnimate }: { canAnimate: boolean }) {
   return (
-    <section className="relative  min-h-screen w-full px-6 md:px-16 pt-28 pb-12 flex flex-col md:flex-row md:items-center overflow-hidden bg-white">
+    <section className="relative  min-h-screen w-full px-6 md:px-16 pt-28 pb-12 flex justify-center items-center flex-col md:flex-row md:items-center overflow-hidden bg-white">
       {/* The Dotted Interactive Background */}
       <InteractiveDotGrid />
 

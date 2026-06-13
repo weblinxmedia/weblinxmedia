@@ -27,7 +27,7 @@ export default function HeroHeading({ canAnimate }: { canAnimate: boolean }) {
   }, [canAnimate]);
 
   return (
-    <h1 ref={ref} className="font-parkinsans overflow-hidden text-[clamp(2.4rem,8vw,8rem)] pb-1 md:pb-3 leading-[0.92] tracking-[-0.03em] text-black">
+    <h1 ref={ref} className="font-parkinsans overflow-hidden text-[clamp(2.3rem,8vw,8rem)] pb-1 md:pb-3 leading-[0.92] tracking-[-0.03em] text-black">
       {siteConfig.hero.heading.split(" ").map((word, i) => (
         <span key={i} className="inline-block  mr-[0.25em] pb-1">
           {/* translate-y-full ensures it is physically impossible to see before animation starts */}
