@@ -30,12 +30,12 @@ export default function Showcase() {
 
         gsap.set(cardRef.current, {
           width: isDesktop ? "65vw" : "80vw",
-          height: isDesktop ? "75vh" : "40vh",
+          height: isDesktop ? "75vh" : "60vh",
           x: 0,
           y: 0,
           rotationX: 25,
           rotationY: -25,
-          rotationZ: 5,
+          rotationZ: isDesktop ? 5 : 1,
           transformPerspective: 1500,
           borderRadius: "4rem",
         });
@@ -108,12 +108,12 @@ export default function Showcase() {
         {/* Animated 3D Card */}
         <div
           ref={cardRef}
-          className=" text-white flex flex-col bg-[#ffffff] items-start justify-end pb-4 overflow-hidden will-change-transform shadow-2xl"
+          className=" text-white flex flex-col bg-[#ffffff] items-start justify-center md:justify-end pb-4 overflow-hidden will-change-transform shadow-2xl"
         >
            <InteractiveDotGrid />
           {/* Glow */}
           <div
-            className="w-[400px] absolute bottom-[-20%] left-[-10%] h-[400px]"
+            className="w-[400px] absolute rounded-[4rem] bottom-[-20%] left-[-10%] h-[400px]"
             style={{
               backgroundImage: 'linear-gradient(-90deg, var(--color-background))',
               borderRadius: '100%',
@@ -122,7 +122,7 @@ export default function Showcase() {
             }}
           />
              <div
-            className="w-[400px] absolute top-[-20%] right-[-20%] h-[400px]"
+            className="w-[400px] absolute rounded-[4rem] top-[-20%] right-[-20%] h-[400px]"
             style={{
               backgroundImage: 'linear-gradient(-90deg, var(--color-background))',
               borderRadius: '100%',
@@ -141,7 +141,7 @@ export default function Showcase() {
           {/* Horizontal Scroller */}
           <div
             ref={horizontalRef}
-            className="flex items-start gap-[40px] px-[10vw] flex-nowrap h-fit pb-5"
+            className="flex items-start gap-[40px] px-[10vw] mt-10 md:mt-0 flex-nowrap h-fit pb-5"
           >
             {/* Intro Text Block */}
             <div className="min-w-[85vw] md:min-w-[30vw] flex flex-col items-start justify-end gap-5 h-full">
