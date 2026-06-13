@@ -54,9 +54,7 @@ export default function Home() {
        <ContactSection />
        <FAQ />
       {/* The 3D Scroll Triggered Section */}
-    <div className="w-full h-70 ">
-      <h1>new section</h1>
-    </div>
+   
     </main>
   );
 }

@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import SmoothScroll from "@/components/SmoothScroll"; // <-- Import the new component
 import { GoogleAnalytics } from "@next/third-parties/google";
 import localFont from 'next/font/local'
+import Header from "@/components/Header/Header";
+import Footer from "@/components/sections/Footer/Footer";
 const parkinsans = Parkinsans({
   subsets: ["latin"],
   variable: "--font-parkinsans",
@@ -78,7 +80,9 @@ export default function RootLayout({
         <ThemeProvider>
           {/* Wrap the children with SmoothScroll */}
           <SmoothScroll>
+            {/* <Header /> */}
             {children}
+            <Footer/>
           </SmoothScroll>
         </ThemeProvider>
         <GoogleAnalytics gaId="G-8FKF0T0QMM"/>

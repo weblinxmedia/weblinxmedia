@@ -1,7 +1,8 @@
 export const siteConfig = {
-  logo: "Weblinx Media",
+  companyName: "Weblinx Media",
   logoUrl: "/images/logo2.png",
-  phone: "+1 (123) 456-7890",
+  phone: "+1 (731) 232-2313",
+  mail: "admin@weblinxmedia.com",
   navLinks: [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services", hasDropdown: true },
@@ -10,8 +11,10 @@ export const siteConfig = {
     { name: "Contact", href: "/contact" },
   ],
   services: [
-    { name: "Website Development", href: "/services/web-development" },
-    { name: "Social Media Design", href: "/services/social-media-design" },
+    { name: "Web Development", href: "/services/web-development" },
+    { name: "Poster Design", href: "/services/social-media-design" },
+    { name: "AI SEO Services", href: "/services/ai-seo-services" },
+    { name: "Video Production", href: "/services/video-production" },
   ],
   hero: {
     heading: "Leading Full Service",
@@ -301,7 +304,7 @@ export const contactData = {
 };
 // src/config/siteConfig.ts
 export const faqData = {
-  smallTitle: "FAQ",
+  smallTitle: "Frequently Asked Questions",
   hiringHeading: "Why hire a professional agency for your digital growth?",
   hiringAnswer: "While DIY tools exist, an agency brings a multi-disciplinary team of experts in design, engineering, and data. We don't just build pages; we architect conversion engines that outpace your competition and secure your brand's future in an AI-driven market.",
   questions: [
@@ -325,5 +328,27 @@ export const faqData = {
       question: "What technology stack do you use for development?",
       answer: "We primarily build on the Next.js 14 App Router, utilizing Tailwind CSS for styling and GSAP for high-end animations. This ensures your site is blazingly fast and highly scalable."
     }
+  ]
+};
+// src/config/siteConfig.ts
+export const footerData = {
+  description: "Weblinx Media is a premier digital agency specialized in engineering high-performance websites and AI-driven growth strategies for the next generation of global brands.",
+  resources: [
+    { name: "Our Blog", href: "/blog" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Roadmap", href: "/roadmap" },
+    { name: "Newsletter", href: "/newsletter" },
+  ],
+  socials: [
+    { name: "Instagram", href: "#" },
+    { name: "LinkedIn", href: "#" },
+    { name: "WhatsApp", href: "#" },
+    { name: "Facebook", href: "#" },
+  ],
+  legal: [
+    { name: "Privacy Policy |", href: "/privacy" },
+    { name: "Terms of Services |", href: "/terms" },
+    { name: "Refund Policy |", href: "/refund" },
+    { name: "Sitemap", href: "/sitemap" },
   ]
 };
