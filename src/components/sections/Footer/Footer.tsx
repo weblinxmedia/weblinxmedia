@@ -229,7 +229,7 @@ export default function Footer() {
           </motion.div>
           </div>
         {/* ── LOWER GRID: newsletter | pages | services | resources+socials ── */}
-        <div className=" flex flex-col w-full md:w-[100%] mx-auto md:flex-row justify-between gap-x-20 gap-y-12 pb-14 border-b mt-25 border-white/[0.06]">
+        <div className=" flex flex-wrap w-full md:w-[100%] mx-auto md:flex-row justify-between gap-x-10 gap-y-12 pb-14 border-b mt-25 border-white/[0.06]">
 
           {/* Newsletter */}
      
@@ -238,7 +238,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 18 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, ease, delay: 0.46 }}
-            className="flex flex-col w-fit md:w-[330px] gap-3"
+            className="flex flex-col w-fit md:w-[380px] gap-3"
           >
             <p className="font-parkinsans text-[13px] tracking-[0.03em] text-background/60 mb-1">
               / Info
@@ -246,15 +246,15 @@ export default function Footer() {
 
             <div className="w-full flex flex-col items-start justify-start pr-5">
                 <img src="/images/logo2.png" width={'100'} className="brightness-0 invert-[90%]" alt="Weblinx Media" />
-                <span className="text-white/40 text-[14px] my-5 font-parkinsans leading-[1.2]">Weblinx Media is a full-service digital marketing agency. Attract, Convert and Close more leads online and get better results with us.</span>
+                <span className="text-white/40 font-light text-[14px] my-5 font-parkinsans leading-[1.2]">Weblinx Media is a full-service digital marketing agency. Attract, Convert and Close more leads online and get better results with us.</span>
            <div className="flex flex-col  gap-1">
                     <div className="flex items-center gap-3 text-white/40 hover:text-acid-lime transition-colors cursor-pointer">
                         <Phone size={16} className="text-background" />
-                        <span className="font-outfit text-[14px]">{siteConfig.phone}</span>
+                        <span className="font-outfit text-[14px] font-light">{siteConfig.phone}</span>
                     </div>
                     <div className="flex items-center gap-3 text-white/40 hover:text-acid-lime transition-colors cursor-pointer">
                         <Mail size={16} className="text-background" />
-                        <span className="font-outfit text-[14px]">{siteConfig.mail}</span>
+                        <span className="font-outfit text-[14px] font-light">{siteConfig.mail}</span>
                     </div>
                 </div>
             </div>
@@ -327,7 +327,7 @@ export default function Footer() {
 
         {/* Legal links row (above bottom strip) */}
         <div className="flex flex-wrap justify-center items-center gap-2 py-6">
-            <div className="flex items-center text-[14px] text-white/55 font-parkinsans gap-2">
+            <div className="flex items-center text-[14px] font-light text-white/55 font-parkinsans gap-2">
               ©{currentYear} - All rights reserved by <Link href='/' className="underline text-background/90">Weblinx Media</Link> |
             </div>
             <div className="flex flex-wrap items-center gap-2">
@@ -335,7 +335,7 @@ export default function Footer() {
             <Link
               key={l.name}
               href={l.href}
-              className="text-[14px] font-parkinsans  text-white/55 hover:text-background/90 transition-colors duration-300"
+              className="text-[14px] font-parkinsans font-light text-white/55 hover:text-background/90 transition-colors duration-300"
             >
               {l.name}
             </Link>

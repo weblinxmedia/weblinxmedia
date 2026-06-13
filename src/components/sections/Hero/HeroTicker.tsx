@@ -45,7 +45,7 @@ export default function HeroTicker({ canAnimate }: { canAnimate: boolean }) {
         {tickerItems.map((item, i) => (
           <span 
             key={`${item}-${i}`} 
-            className="h-[1.3em] flex items-center text-background leading-none"
+            className="md:h-[1.3em] ticker-eff flex items-center text-background leading-none"
           >
             {item}
           </span>

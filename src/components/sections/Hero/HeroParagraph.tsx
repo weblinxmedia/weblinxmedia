@@ -17,7 +17,7 @@ export default function HeroParagraph({ canAnimate }: { canAnimate: boolean }) {
   const words = siteConfig.hero.paragraph.split(" ");
 
   return (
-    <div className="mt-3 flex flex-col items-start gap-8 max-w-[80%] w-full">
+    <div className="mt-3 flex flex-col items-start gap-5 md:gap-8 max-w-[80%] w-full">
       {/* 
           Instead of a single P tag, we use a flex container that wraps.
           Each word is inside its own 'mask' (overflow-hidden).

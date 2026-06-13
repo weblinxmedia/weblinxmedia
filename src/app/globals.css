@@ -195,3 +195,53 @@ label{
   transition: all 0.2s linear;
   transition-delay: 0.15s;
 }
+@media screen and (max-width: 1100px) {
+  .nav-links-px {
+    padding: 3px 15px !important;
+  }
+.hero-sec{
+  margin-top: 4%;
+}
+}
+@media screen and (max-width: 1020px) {
+  .nav-links-px {
+    padding: 3px 11px !important;
+    font-size: 12px !important;
+  }
+  .nav-icon{
+    width:14px !important;
+    height: 14px !important;
+  }
+  .button-nav{
+    font-size: 11px !important;
+  }
+  .ticker-eff {
+    font-size: 90% !important;
+  }
+}
+@media screen and (max-width: 875px) {
+  .nav-links-px {
+    padding: 3px 8px !important;
+    font-size: 12px !important;
+  }
+  .nav-icon{
+    width:14px !important;
+    height: 14px !important;
+  }
+  .button-nav{
+    font-size: 10px !important;
+    padding: 0.9rem 2rem !important;
+  }
+}
+@media screen and (max-width: 780px) {
+   .ticker-eff {
+ height:70px;
+
+  }
+}
+@media screen and (max-width: 780px) {
+   .ticker-eff {
+ height:50px;
+
+  }
+}
