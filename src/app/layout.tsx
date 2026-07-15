@@ -10,7 +10,6 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/sections/Footer/Footer";
 import Script from 'next/script'
 const parkinsans = Parkinsans({
-
   subsets: ["latin"],
   variable: "--font-parkinsans",
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -40,11 +39,6 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   weight: ["300", "400", "500", "600", "700"],
 });
-// app/layout.tsx
-// app/layout.tsx
-// app/layout.tsx
-// import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.weblinxmedia.com"),
   applicationName: 'Weblinx Media',
@@ -75,15 +69,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916588355555529"
-          crossOrigin="anonymous" strategy='afterInteractive' />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916588355555529"
+          crossOrigin="anonymous"></script>
       </head>
-      {/* Added overflow-x-hidden to body to permanently prevent horizontal scrollbars globally */}
       <body className={`${parkinsans.variable} ${eula.variable} ${outfit.variable} ${mediasans.variable} ${montserrat.variable} bg-white text-black transition-colors duration-300 overflow-x-hidden`}>
         <ThemeProvider>
-          {/* Wrap the children with SmoothScroll */}
           <SmoothScroll>
-            {/* <Header /> */}
             {children}
             <Footer />
           </SmoothScroll>
