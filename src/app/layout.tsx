@@ -76,7 +76,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916588355555529"
-          crossOrigin="anonymous" />
+          crossOrigin="anonymous" strategy='afterInteractive' />
       </head>
       {/* Added overflow-x-hidden to body to permanently prevent horizontal scrollbars globally */}
       <body className={`${parkinsans.variable} ${eula.variable} ${outfit.variable} ${mediasans.variable} ${montserrat.variable} bg-white text-black transition-colors duration-300 overflow-x-hidden`}>
