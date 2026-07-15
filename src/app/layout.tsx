@@ -9,6 +9,8 @@ import localFont from 'next/font/local'
 import Header from "@/components/Header/Header";
 import Footer from "@/components/sections/Footer/Footer";
 import Script from 'next/script'
+import CookieConsent from "@/components/CookieConsent";
+
 const parkinsans = Parkinsans({
   subsets: ["latin"],
   variable: "--font-parkinsans",
@@ -78,6 +80,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </SmoothScroll>
+          <CookieConsent />
         </ThemeProvider>
         <GoogleAnalytics gaId="G-8FKF0T0QMM" />
       </body>
