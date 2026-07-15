@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import { Parkinsans, Sora, Montserrat} from "next/font/google";
+import { Parkinsans, Sora, Montserrat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import SmoothScroll from "@/components/SmoothScroll"; // <-- Import the new component
@@ -8,22 +8,24 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import localFont from 'next/font/local'
 import Header from "@/components/Header/Header";
 import Footer from "@/components/sections/Footer/Footer";
+import Script from 'next/script'
 const parkinsans = Parkinsans({
+
   subsets: ["latin"],
   variable: "--font-parkinsans",
   weight: ["300", "400", "500", "600", "700", "800"],
 });
- 
+
 const mediasans = localFont({
   src: [
-    {path : './fonts/mediasans.ttf'}
+    { path: './fonts/mediasans.ttf' }
   ],
   display: 'swap',
   variable: '--font-mediasans',
 })
 const eula = localFont({
   src: [
-    {path : './fonts/eula.ttf'}
+    { path: './fonts/eula.ttf' }
   ],
   display: 'swap',
   variable: '--font-eula',
@@ -58,7 +60,7 @@ export const metadata: Metadata = {
     description: "We are a results-driven web development & digital marketing agency committed to helping brands grow through SEO, Social Media, and Web Design.",
     url: "https://www.weblinxmedia.com",
     type: "website",
-    
+
   },
 
   verification: {
@@ -73,7 +75,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
-        
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916588355555529"
+          crossOrigin="anonymous" />
       </head>
       {/* Added overflow-x-hidden to body to permanently prevent horizontal scrollbars globally */}
       <body className={`${parkinsans.variable} ${eula.variable} ${outfit.variable} ${mediasans.variable} ${montserrat.variable} bg-white text-black transition-colors duration-300 overflow-x-hidden`}>
@@ -82,10 +85,10 @@ export default function RootLayout({
           <SmoothScroll>
             {/* <Header /> */}
             {children}
-            <Footer/>
+            <Footer />
           </SmoothScroll>
         </ThemeProvider>
-        <GoogleAnalytics gaId="G-8FKF0T0QMM"/>
+        <GoogleAnalytics gaId="G-8FKF0T0QMM" />
       </body>
     </html>
   );
